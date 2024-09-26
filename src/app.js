@@ -1,35 +1,27 @@
-const express= require('express');
-
-const app= express();
-
-app.get("/a(bg)+c",(req,res)=>{
-    res.send({name:"Akshay Saini"});
+const express = require("express");
+const connectDB = require("./config/database");
+const app = express();
+const User = require('./middlewares/models/user')
+app.post("/signup", async (req,res)=>{
+const USerObj  = new User({
+  firstName:"Pinki",
+lastName: "Kumari",
+email: "pinki@getMaxListeners.com",
+password: "1234567",
 });
-app.get('/files/', (req, res) => {
-    const filePath = req.params[0]; // Everything after /files/
-    res.send({name:"Akshay Saini"});
-});
 
+await USerObj.save();
+res.send("user added successfully");
+})
 
-// app.get("/user",(req,res)=>{
-//     res.send({name:"Akshay Saini"});
-// });
-// app.post("/user",(req,res)=>{
-//     res.send("data successfully added");
-// });
-// app.delete("/user",(req,res)=>{
-//     res.send("data successfully deleted");
-// });
-// app.use("/pk",(req,res)=>{
-//     res.send("Hello pk DevTinder!!!");
-// });
-// app.use("/hello",(req,res)=>{
-//     res.send("Hello DevTinder this is hello command!!!");
-// });
-// app.use("/",(req,res)=>{
-//     res.send("Hello global Routing DevTinder!!!");
-// });
-app.listen(3000,()=>{
-    console.log("server created successfullly.!!");
-});
+connectDB()
+  .then(() => {
+    console.log("successfully connected to databse");
+    app.listen(3000, (req, res) => {
+      console.log("server created successfully");
+    });
+  })
+  .catch((err) => {
+    console.error("databse is not connected ");
+  });
 

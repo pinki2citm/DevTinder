@@ -1,2 +1,17 @@
 #order of routing is very important
 #the scanning of routing goes from top to bottom
+# create the server using express.js
+# Routing in express.js 
+#order of Routes are most important
+# testing the APIs in Postman
+# login API created
+# MiddleWares and Error Handling
+# created a MongoDB cluster on MongoDB Atlas
+# connected that cluster into our MongoDB compass 
+# with the help of that MONGO URI, we are connected our backend to the particular cluster
+#MONGO URI: mongodb+srv://pinkikumaristm9:ZJBRuVfoHllUQWGr@cluster0.ns6vq.mongodb.net/
+# now move the code of connecting DB to the app.js file for better connectivity
+#it's a good practice to connect DB first, then do the other operations.
+#JS object VS JSON
+# sending the data directly form the server using req.body.
+#make the /signup API dynamic to receive data from the end user

@@ -1,4 +1,5 @@
 #order of routing is very important
+<<<<<<< HEAD
 #the scanning of routing goes from top to bottom
 # create the server using express.js
 # Routing in express.js 
@@ -17,3 +18,6 @@
 # sending the data directly form the server using req.body.
 #make the /signup API dynamic to receive data from the end user
 #
+=======
+#the scanning of routing goes from top to bottom
+>>>>>>> d1622f256cee2164155a14d9bf839505aff5fee1

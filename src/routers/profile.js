@@ -50,4 +50,11 @@ profileRouter.patch("/profile/edit",userAuth, async (req,res) =>{
   }
 });
 
+profileRouter.patch("profile/password", userAuth, async (req, res)=>{
+// user may or may not logged in
+//user must have signed in
+const data= req.body;
+
+
+});
 module.exports = {profileRouter};

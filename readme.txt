@@ -31,3 +31,33 @@
 #add timestamps to the schema
 #update patch API/user 
 #install validator and check for email vaidation using function.
+
+#EP:09  Validate sign up data
+# encrypted the password using bcrypt.hash()
+#and store the encrypted passsword into the database
+#create login api and add some validations (email and password check)
+
+#EP-10
+#install cookie-parser
+#just send a dummy cooike to the user
+#create a /profile API and check if you get the cookie back or not
+#install jwt token
+#In login API create a JWT tokens, send back to the user
+#now read the cookie inside your profile API the find the user which is logged in
+
+# create a UserAuth MiddleWare
+# Add the UserAuth middleWare to the /profile API 
+# create a new API /createConnectionRequest  APIs
+# Set the Expiry of JWT token and cookies to 7 days
+
+#created getJWT() and validatePassword inside the mongoose schema(User)
+
+# EP -11
+# created Rotes folder for managing authRouter, profileRouter,requestRouter
+# Created authRouter, profileRouter,requestRouter
+# Imported all of these in app.js
+#created  GET profile/view and PATCH profile/edit api
+#Homework PATCH profile/passsword => forgot password api
+
+# Make validate all the data in POST, PATCH api
+

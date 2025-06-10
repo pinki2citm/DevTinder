@@ -1,3 +1,6 @@
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
 const mongoose = require('mongoose');
 const validator =require('validator');
 const UserSchema = new mongoose.Schema({
@@ -16,7 +19,7 @@ const UserSchema = new mongoose.Schema({
             if(!validator.isEmail(value)) 
                 throw new Error("invalid Email");
             
-        }
+        },
         required: true,
         unique:true
     },
@@ -52,6 +55,30 @@ const UserSchema = new mongoose.Schema({
     timestamps:true,
 }
 );
+
+
+UserSchema.methods.getJWT = async function () {
+    const user = this;
+    const SECRET_KEY = "Dev@Tinder"; // Ensure this is a valid string
+
+    if (!SECRET_KEY) {
+        throw new Error("JWT Secret key is missing!");
+    }
+
+    const token = jwt.sign({ _id: user._id}, SECRET_KEY, {
+        expiresIn: "7d",
+    });
+
+    return token;
+};
+
+
+UserSchema.methods.validatePassword = async function (passwodInputByUser) {
+const user=this;
+const isPasswordValid = await bcrypt.compare(passwodInputByUser, this.password);
+return isPasswordValid;
+}
+    
 
 const User = mongoose.model("User",UserSchema);
 module.exports = User;

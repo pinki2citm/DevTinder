@@ -61,3 +61,17 @@
 
 # Make validate all the data in POST, PATCH api
 
+# EP - 12
+# created ConnectionRequestModelSchema for sending connection request
+
+# Creating request/send/interested/:userId
+# Creating request/send/ignored/:userId
+
+The above two are converted into: 
+request/send/status/:userId
+
+# Creating request/review/accepted/:userId
+# Creating request/review/rejected/:userId
+
+The above two are converted into: 
+request/review/status/:userId

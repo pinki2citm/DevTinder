@@ -62,16 +62,26 @@
 # Make validate all the data in POST, PATCH api
 
 # EP - 12
-# created ConnectionRequestModelSchema for sending connection request
+# created ConnectionRequestModelSchema for sending connection request,
+ - add proper validations(think about corner cases) 
+-  $or query in mondogb
+ - schema.pre("save") function
 
 # Creating request/send/interested/:userId
 # Creating request/send/ignored/:userId
 
 The above two are converted into: 
-request/send/status/:userId
+request/send/status/:userId  (Done)
 
 # Creating request/review/accepted/:userId
-# Creating request/review/rejected/:userId
+# Creating request/review/rejected/:userId 
 
 The above two are converted into: 
-request/review/status/:userId
+request/review/status/:userId   (Pending)
+
+# Read more about indexes in database
+# Why do we need index in database?
+# what is the advantages and disadvantages of creting indexes?
+
+
+

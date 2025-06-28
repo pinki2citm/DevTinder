@@ -32,12 +32,12 @@
 #update patch API/user 
 #install validator and check for email vaidation using function.
 
-#EP:09  Validate sign up data
-# encrypted the password using bcrypt.hash()
+## EP:09  Validate sign up data
+#encrypted the password using bcrypt.hash()
 #and store the encrypted passsword into the database
 #create login api and add some validations (email and password check)
 
-#EP-10
+## EP-10
 #install cookie-parser
 #just send a dummy cooike to the user
 #create a /profile API and check if you get the cookie back or not

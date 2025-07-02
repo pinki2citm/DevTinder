@@ -9,6 +9,7 @@ const cookieParser = require("cookie-parser");
 const {authRouter} = require("./routers/auth");
 const { requestRouter } = require("./routers/request");
 const { profileRouter } = require("./routers/profile");
+const {UserRouter} = require("./routers/user");
 //Database connnection
 connectDB()
   .then(() => {
@@ -33,6 +34,7 @@ app.use(cors({ origin: "http://localhost:5173",
 app.use("/", authRouter);
 app.use("/",profileRouter);
 app.use("/",requestRouter);
+app.use("/",UserRouter);
 
 // app.delete("/user", async (req, res) => {
 //   const userId = req.body.userId;

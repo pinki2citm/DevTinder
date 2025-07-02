@@ -88,8 +88,10 @@ request/review/status/:userId   (Done)
 Created API /request/review/status/:userId
 
 Now we will create UserRouter
-- GET /user/connections
-- GET /user/requests
-- GET /user/feed - Gets you the profile of other users on the platform
+- GET /user/connections (Done)
+- GET /user/requests (Done)
+- GET /user/feed  (Pending) - Gets you the profile of other users on the platform
 -Thought Process of - POST vs GET APIs
+-
+- 
 

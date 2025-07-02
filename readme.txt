@@ -77,11 +77,19 @@ request/send/status/:userId  (Done)
 # Creating request/review/rejected/:userId 
 
 The above two are converted into: 
-request/review/status/:userId   (Pending)
+request/review/status/:userId   (Done)
 
 # Read more about indexes in database
 # Why do we need index in database?
 # what is the advantages and disadvantages of creting indexes?
 
+# EP - 13
 
+Created API /request/review/status/:userId
+
+Now we will create UserRouter
+- GET /user/connections
+- GET /user/requests
+- GET /user/feed - Gets you the profile of other users on the platform
+-Thought Process of - POST vs GET APIs
 

@@ -14,14 +14,14 @@ profileRouter.get("/user", async (req, res) => {
     res.status(404).send("USer not found");
   }
 });
-profileRouter.get("/feed", async (req, res) => {
-  try {
-    const user = await User.find({});
-    res.send(user);
-  } catch (error) {
-    res.status(404).send("USer not found");
-  }
-});
+// profileRouter.get("/feed", async (req, res) => {
+//   try {
+//     const user = await User.find({});
+//     res.send(user);
+//   } catch (error) {
+//     res.status(404).send("USer not found");
+//   }
+// });
 profileRouter.get("/profile/view",userAuth, async (req, res) => {
   try {
     const user = req.user;

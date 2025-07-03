@@ -60,6 +60,10 @@ UserRouter.get("/feed", userAuth, async (req,res)=>{
 try{
 
 const loggedinUSer = req.user;
+const page = (req.query.page) || 1;
+let limit = (req.query.limit) || 10;
+    limit = limit>50 ?50 : limit;
+let skip =(page-1) *limit;
 
 const connectionRequestData = await ConnectionRequest.find({
    $or:[
@@ -81,7 +85,7 @@ const users = await User.find({
         {_id:{ $nin: Array.from(hiddenUserFromFeed)}},
         {_id: { $ne: loggedinUSer._id}}
     ]
-})
+}).skip(skip).limit(limit);
     res.send(users);
 } catch(error)
 {

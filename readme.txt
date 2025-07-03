@@ -92,6 +92,11 @@ Now we will create UserRouter
 - GET /user/requests (Done)
 - GET /user/feed  (Pending) - Gets you the profile of other users on the platform
 -Thought Process of - POST vs GET APIs
--
-- 
+
+
+EP: 14
+
+- logic of /feed API
+- Explore Query Operators : $and, $ne, $nin and others
+- Implemented Pagination in the API
 
